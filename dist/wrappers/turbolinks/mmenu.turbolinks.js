@@ -1,9 +1,9 @@
 export default function () {
     var classnames;
-    document.addEventListener('turbolinks:before-visit', function (evnt) {
+    document.addEventListener('turbolinks:request-start', function (evnt) {
         console.log("request-start");
         classnames = document
-            .querySelector('.mm-wrapper')
+            .querySelector('body')
             .className.split(' ')
             .filter(function (name) { return /mm-/.test(name); });
         console.log(classnames);        
@@ -13,6 +13,6 @@ export default function () {
         if (typeof classnames === 'undefined') {
             return;
         }
-        document.querySelector('.mm-wrapper').className = classnames;
+        document.querySelector('body').className = classnames;
     });
 }
