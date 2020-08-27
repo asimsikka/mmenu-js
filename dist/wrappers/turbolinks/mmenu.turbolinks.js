@@ -1,6 +1,6 @@
 export default function () {
     var classnames;
-    document.addEventListener('turbolinks:before-visit', function (evnt) {
+    document.addEventListener('turbolinks:request-start', function (evnt) {
         classnames = document
             .querySelector('.mm-wrapper')
             .className.split(' ')
