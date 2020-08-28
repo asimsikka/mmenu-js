@@ -10,6 +10,6 @@ export default function () {
         if (typeof classnames === 'undefined') {
             return;
         }
-        document.querySelector('.mm-wrapper').className = classnames;
+        document.querySelector('.mm-wrapper').className = classnames.join(" ");
     });
 }
