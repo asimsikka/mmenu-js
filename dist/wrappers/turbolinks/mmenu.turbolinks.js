@@ -13,6 +13,6 @@ export default function () {
         if (typeof classnames === 'undefined') {
             return;
         }
-        document.querySelector('body').className = classnames;
+        document.querySelector('body').className = classnames.join(" ");
     });
 }
